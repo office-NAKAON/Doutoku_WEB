@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
 import { TransitionLink } from "@/components/TransitionLink";
-import { currentQuestion, themes } from "@/data/content";
+import { themes } from "@/data/content";
 
 export const metadata: Metadata = {
   title: "クラスについて",
@@ -20,18 +20,15 @@ export default function ClassPage() {
       <PageHeader
         eyebrow="CLASS 2-3"
         title="クラスについて"
-        description="道徳の時間に出た問いを、その場で終わらせないためのサイトです。2年3組の共有の考えだけを残します。"
+        description="教材11から16の内容項目とねらいを、クラスで共有するためのサイトです。"
       />
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-16 lg:grid-cols-12 lg:py-20">
         <div className="space-y-6 text-lg leading-loose lg:col-span-7">
           <p>
-            授業では、資料を読んで話し合い、最後に自分の考えがどこで動いたかを言葉にします。このサイトは、その「動いたあと」をクラスの記録として置く場所です。
+            このサイトは、道徳の時間で扱った教材を、内容項目とねらいとともに置く場所です。
           </p>
           <p>
-            正解を発表するページではありません。内容項目ごとに、クラスが立ち止まった問いと、話し合いのあとで残った考えを短くまとめています。
-          </p>
-          <p>
-            いまの共通の問いは、{currentQuestion.text}。{currentQuestion.note}
+            掲載している実践は、教材11「父の決意」から教材16「樹齢七千年の杉」までの6つです。各ページに、内容項目とねらいを載せています。
           </p>
         </div>
         <aside className="rounded-xl border border-border bg-card p-6 shadow-sm lg:col-span-5">

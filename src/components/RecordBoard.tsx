@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { lessonsNewestFirst, perspectiveTags, type Lesson } from "@/data/content";
+import { formatLessonDate, lessonsNewestFirst, perspectiveTags, type Lesson } from "@/data/content";
 import { TagFilter } from "@/components/TagFilter";
 import { TransitionLink } from "@/components/TransitionLink";
 
@@ -48,13 +48,17 @@ function FeaturedLesson({ lesson }: { lesson: Lesson }) {
         {lesson.index}
       </span>
       <p className="text-xs tracking-[0.18em] text-muted">
-        {lesson.date}
+        {formatLessonDate(lesson.date)}
+        <span className="px-2">/</span>
+        教材 {lesson.index}
+        <span className="px-2">/</span>
+        {lesson.code}
         <span className="px-2">/</span>
         {lesson.contentItem}
       </p>
       <h3 className="mt-6 font-display text-4xl tracking-tight">{lesson.title}</h3>
-      <p className="mt-6 max-w-2xl font-display text-2xl leading-snug sm:text-3xl">「{lesson.question}」</p>
-      <p className="mt-6 max-w-xl leading-relaxed text-muted">{lesson.lead}</p>
+      <p className="mt-6 text-xs tracking-[0.18em] text-muted">ねらい</p>
+      <p className="mt-2 max-w-2xl font-display text-2xl leading-snug sm:text-3xl">{lesson.aim}</p>
       <p className="mt-8 text-sm font-medium text-primary">記録を読む</p>
     </TransitionLink>
   );
@@ -69,7 +73,9 @@ function LessonRow({ lesson }: { lesson: Lesson }) {
       <span className="col-span-2 font-display text-lg text-primary sm:col-span-1">{lesson.index}</span>
       <span className="col-span-10 font-display text-2xl sm:col-span-5">{lesson.title}</span>
       <span className="col-span-7 text-sm text-muted sm:col-span-4">{lesson.contentItem}</span>
-      <span className="col-span-5 text-right text-sm text-muted sm:col-span-2">{lesson.date}</span>
+      <span className="col-span-5 text-right text-sm text-muted sm:col-span-2">
+        {formatLessonDate(lesson.date)}
+      </span>
     </TransitionLink>
   );
 }

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s / 2年3組 道徳Web",
   },
   description:
-    "考えたことを、言葉にして残す。2026年度、2年3組の道徳ポートフォリオ。",
+    "教材11から16の内容項目とねらい。2026年度、2年3組の道徳ポートフォリオ。",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

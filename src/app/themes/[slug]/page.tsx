@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader";
 import { TransitionLink } from "@/components/TransitionLink";
-import { currentQuestion, lessonsForTheme, themes } from "@/data/content";
+import { formatLessonDate, lessonsForTheme, themes } from "@/data/content";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -41,12 +41,6 @@ export default async function ThemePage({ params }: Props) {
           ))}
         </ul>
 
-        <div className="mt-8 max-w-2xl">
-          <p className="text-xs tracking-[0.18em] text-muted">{currentQuestion.label}</p>
-          <p className="mt-2 font-display text-2xl">{currentQuestion.text}</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted">{currentQuestion.note}</p>
-        </div>
-
         {records.length > 0 ? (
           <ul className="mt-10 border-t border-border">
             {records.map((lesson) => (
@@ -58,7 +52,7 @@ export default async function ThemePage({ params }: Props) {
                   <span className="font-display text-lg text-primary sm:col-span-1">{lesson.index}</span>
                   <span className="font-display text-3xl sm:col-span-6">{lesson.title}</span>
                   <span className="text-sm text-muted sm:col-span-3">{lesson.contentItem}</span>
-                  <span className="text-sm text-muted sm:col-span-2 sm:text-right">{lesson.date}</span>
+                  <span className="text-sm text-muted sm:col-span-2 sm:text-right">{formatLessonDate(lesson.date)}</span>
                 </TransitionLink>
               </li>
             ))}

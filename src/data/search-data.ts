@@ -12,7 +12,7 @@ export interface SearchItem {
 export const searchData: SearchItem[] = [
   {
     title: "トップ",
-    description: "2年3組 道徳Web の表紙。四つの視点と、いまの問いへ入る。",
+    description: "2年3組 道徳Web の表紙。四つの視点と、教材11から16へ入る。",
     url: "/",
     category: "案内",
     keywords: ["ホーム", "トップ", "表紙", "2年3組", "道徳"],
@@ -28,7 +28,7 @@ export const searchData: SearchItem[] = [
   },
   {
     title: "授業の記録",
-    description: "話し合いのあとに残った問いと、クラスの考え。",
+    description: "教材11から16。内容項目とねらい。",
     url: "/records",
     category: "案内",
     keywords: ["記録", "授業", "ポートフォリオ", "一覧"],
@@ -55,7 +55,7 @@ export const searchData: SearchItem[] = [
     description: lesson.lead,
     url: `/records/${lesson.slug}`,
     category: "授業の記録",
-    keywords: [lesson.contentItem, lesson.question, ...lesson.keywords],
+    keywords: [lesson.contentItem, lesson.aim, lesson.code, ...lesson.keywords],
     tags: lesson.tags,
   })),
 ];

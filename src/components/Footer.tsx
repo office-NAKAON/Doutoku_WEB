@@ -14,7 +14,7 @@ export function Footer() {
         <div className="md:col-span-6">
           <p className="font-display text-3xl">2年3組 道徳Web</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
-            考えたことを、言葉にして残す。2026年度、2年3組の道徳ポートフォリオ。
+            教材11から16の内容項目とねらい。2026年度、2年3組の道徳ポートフォリオ。
           </p>
         </div>
         <nav className="grid grid-cols-2 gap-3 text-sm md:col-span-6 md:justify-items-end" aria-label="フッター">

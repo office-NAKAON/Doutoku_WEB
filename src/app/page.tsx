@@ -12,23 +12,23 @@ import {
 
 const stats = [
   { value: "04", label: "学びの視点" },
-  { value: "07", label: "授業の記録" },
-  { value: "2学期", label: "いまの地点" },
+  { value: "06", label: "授業の記録" },
+  { value: "11–16", label: "教材番号" },
   { value: "2026", label: "年度" },
 ];
 
 const guide = [
   {
-    title: "授業のあと",
-    body: "記録を読み、自分の考えとどこが違うかを見つける。同じ意見を探すページではない。",
+    title: "教材を選ぶ",
+    body: "番号、教材名、内容項目から開く。掲載しているのは、11から16までの6つです。",
   },
   {
-    title: "話し合う前",
-    body: `ページにある問いだけを先に読む。${currentQuestion.start}`,
+    title: "ねらいを見る",
+    body: "各ページの先頭に、その時間のねらいを置いています。内容項目と合わせて読んでください。",
   },
   {
     title: "家の人と",
-    body: "名前は出さない。内容項目と問いを手がかりに、今日の授業で残ったことを話す。",
+    body: "名前は出さない。教材名とねらいを手がかりに、今日の授業で考えたことを話す。",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-              考えたことを、言葉にして残す。話し合いの前とあとで、自分の見方がどう動いたかを記録する、2年3組のポートフォリオです。
+              教材11から16までの実践を、内容項目とねらいとともに残す、2年3組のポートフォリオです。
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               {latestLesson && (
@@ -70,7 +70,7 @@ export default function Home() {
                 href="#question"
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium transition-all duration-200 hover:border-primary active:scale-95"
               >
-                いまの問い
+                掲載中の教材
               </a>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function Home() {
                 <p className="font-sans text-xs tracking-[0.28em] text-primary">02</p>
                 <h2 className="mt-3 font-display text-4xl tracking-tight sm:text-5xl">授業の記録</h2>
                 <p className="mt-4 leading-relaxed text-muted">
-                  いちばん新しい記録を大きく置き、それ以前は目次のように並べています。個人の名前は出していません。
+                  実施日の新しいものから並べています。各教材の内容項目とねらいを載せています。
                 </p>
               </div>
               <TransitionLink href="/records" className="text-sm font-medium text-primary">

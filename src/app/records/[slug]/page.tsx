@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TransitionLink } from "@/components/TransitionLink";
-import { currentQuestion, getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
+import { formatLessonDate, getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -42,31 +42,23 @@ export default async function LessonPage({ params }: Props) {
       </p>
       <h1 className="mt-4 font-display text-5xl tracking-tight sm:text-6xl">{lesson.title}</h1>
       <p className="mt-4 text-sm text-muted">
-        {lesson.date}
+        {formatLessonDate(lesson.date)}
         <span className="px-2">/</span>
-        記録 {lesson.index}
+        教材 {lesson.index}
+        <span className="px-2">/</span>
+        {lesson.code}
       </p>
 
-      <blockquote className="mt-12 border-l-4 border-primary pl-6 font-display text-3xl leading-snug sm:text-4xl">
-        {lesson.question}
-      </blockquote>
-
-      <div className="mt-10 space-y-6 text-lg leading-loose">
-        <p>{lesson.lead}</p>
-        {lesson.notes.map((note) => (
-          <p key={note}>{note}</p>
-        ))}
-      </div>
+      <p className="mt-12 text-xs tracking-[0.18em] text-muted">ねらい</p>
+      <p className="mt-3 border-l-4 border-primary pl-6 font-display text-3xl leading-snug sm:text-4xl">
+        {lesson.aim}
+      </p>
 
       <aside className="mt-12 rounded-xl border border-border bg-card p-6 shadow-sm">
         <p className="text-xs tracking-[0.18em] text-muted">内容項目</p>
         <p className="mt-2 font-display text-2xl">{lesson.contentItem}</p>
-        <p className="mt-3 text-sm leading-relaxed text-muted">
-          この記録はクラスで共有した考えです。個人の発言や名前は残していません。
-        </p>
-        <p className="mt-6 border-t border-border pt-6 text-xs tracking-[0.18em] text-muted">{currentQuestion.label}</p>
-        <p className="mt-2 font-display text-2xl">{currentQuestion.text}</p>
-        <p className="mt-3 text-sm leading-relaxed text-muted">{currentQuestion.note}</p>
+        <p className="mt-6 text-xs tracking-[0.18em] text-muted">区分</p>
+        <p className="mt-2 font-display text-2xl">{lesson.code}</p>
       </aside>
 
       {related.length > 0 && (
@@ -80,7 +72,7 @@ export default async function LessonPage({ params }: Props) {
                   className="flex flex-wrap items-baseline justify-between gap-3 py-4 transition-colors hover:text-primary"
                 >
                   <span className="font-display text-xl">{item.title}</span>
-                  <span className="text-sm text-muted">{item.date}</span>
+                  <span className="text-sm text-muted">{formatLessonDate(item.date)}</span>
                 </TransitionLink>
               </li>
             ))}
