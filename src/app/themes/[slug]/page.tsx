@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader";
 import { TransitionLink } from "@/components/TransitionLink";
-import { lessonsForTheme, themes } from "@/data/content";
+import { currentQuestion, lessonsForTheme, themes } from "@/data/content";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -40,6 +40,12 @@ export default async function ThemePage({ params }: Props) {
             </li>
           ))}
         </ul>
+
+        <div className="mt-8 max-w-2xl">
+          <p className="text-xs tracking-[0.18em] text-muted">{currentQuestion.label}</p>
+          <p className="mt-2 font-display text-2xl">{currentQuestion.text}</p>
+          <p className="mt-3 text-sm leading-relaxed text-muted">{currentQuestion.note}</p>
+        </div>
 
         {records.length > 0 ? (
           <ul className="mt-10 border-t border-border">

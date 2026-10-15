@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TransitionLink } from "@/components/TransitionLink";
-import { getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
+import { currentQuestion, getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -64,6 +64,9 @@ export default async function LessonPage({ params }: Props) {
         <p className="mt-3 text-sm leading-relaxed text-muted">
           この記録はクラスで共有した考えです。個人の発言や名前は残していません。
         </p>
+        <p className="mt-6 border-t border-border pt-6 text-xs tracking-[0.18em] text-muted">{currentQuestion.label}</p>
+        <p className="mt-2 font-display text-2xl">{currentQuestion.text}</p>
+        <p className="mt-3 text-sm leading-relaxed text-muted">{currentQuestion.note}</p>
       </aside>
 
       {related.length > 0 && (

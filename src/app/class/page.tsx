@@ -31,8 +31,7 @@ export default function ClassPage() {
             正解を発表するページではありません。内容項目ごとに、クラスが立ち止まった問いと、話し合いのあとで残った考えを短くまとめています。
           </p>
           <p>
-            いまの共通の問いは、{currentQuestion.text}
-            個別の記録を読んだら、もう一度この文に戻ってみてください。
+            いまの共通の問いは、{currentQuestion.text}。{currentQuestion.note}
           </p>
         </div>
         <aside className="rounded-xl border border-border bg-card p-6 shadow-sm lg:col-span-5">

@@ -162,7 +162,7 @@ export const lessons: Lesson[] = [
     index: "06",
     title: "この町の朝",
     themeSlug: "society",
-    contentItem: "郷土の伝統と文化の尊重",
+    contentItem: "郷土の伝統と文化の尊重、郷土を愛する態度",
     date: "2026.09.25",
     lead: "見慣れた場所にも、自分より長い時間がある。",
     question: "この景色は、だれの記憶を引き受けているだろう。",
@@ -220,8 +220,11 @@ export const perspectiveTags = [
   "生命と自然",
 ] as const;
 
+const questionStart = "結論を急がず、抜けている立場に気がつくところから始める。";
+
 export const currentQuestion = {
   label: "2学期の共通の問い",
   text: "「ウェルビーイング」。それは、あなたと私の幸せ",
-  note: "授業の記録は、それぞれの内容項目から、この問いへ戻ってくる。結論を急がず、抜けている立場に気がつくところから始める。",
+  start: questionStart,
+  note: `授業の記録は、それぞれの内容項目から、この問いへ戻ってくる。${questionStart}`,
 };
