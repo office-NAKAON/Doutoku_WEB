@@ -1,3 +1,13 @@
+# 2年3組 道徳Web
+
+公開サイト: https://office-nakaon.github.io/Doutoku_WEB/
+
+## ライセンス
+
+プログラム部分は [MIT License](LICENSE) です。
+
+授業記録、文章、写真などの教育コンテンツは MIT License の対象外です。無断転載はできません。
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

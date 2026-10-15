@@ -31,7 +31,7 @@ export function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-4 text-xs text-muted">
-          <p>個人が特定される記述は載せていません。</p>
+          <p>個人が特定される記述は載せていません。授業の文章の無断転載はできません。</p>
           <p>検索は Ctrl + K</p>
         </div>
       </div>
