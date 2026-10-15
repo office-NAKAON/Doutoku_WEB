@@ -20,6 +20,8 @@ export function TransitionLink({
 }: TransitionLinkProps) {
   const pathname = usePathname();
   const { navigate } = usePageTransition();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+  const publicHref = href.startsWith("/") ? `${basePath}${href}` : href;
 
   const handleClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     onClick?.();
@@ -34,7 +36,7 @@ export function TransitionLink({
       return;
     }
 
-    const url = new URL(href, window.location.href);
+    const url = new URL(href, window.location.origin);
     if (url.origin !== window.location.origin) return;
     if (url.pathname === pathname && url.hash) return;
     if (url.pathname === pathname && !url.hash) {
@@ -47,7 +49,7 @@ export function TransitionLink({
   };
 
   return (
-    <a href={href} onClick={handleClick} className={className} aria-current={ariaCurrent}>
+    <a href={publicHref} onClick={handleClick} className={className} aria-current={ariaCurrent}>
       {children}
     </a>
   );
