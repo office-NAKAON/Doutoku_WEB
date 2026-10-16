@@ -55,7 +55,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-              教材11から16までの実践を、内容項目とねらいとともに残す、2年3組のポートフォリオです。
+              教材11から16までの実践を、「内容項目」と「ねらい」とともに残す、2年3組のポートフォリオです。
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               {latestLesson && (
@@ -165,7 +165,7 @@ export default function Home() {
                 <p className="font-sans text-xs tracking-[0.28em] text-primary">02</p>
                 <h2 className="mt-3 font-display text-4xl tracking-tight sm:text-5xl">授業の記録</h2>
                 <p className="mt-4 leading-relaxed text-muted">
-                  実施日の新しいものから並べています。各教材の内容項目とねらいを載せています。
+                  実施日の新しいものから並べています。各教材の「内容項目」と「ねらい」を載せています。
                 </p>
               </div>
               <TransitionLink href="/records" className="text-sm font-medium text-primary">

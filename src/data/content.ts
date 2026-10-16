@@ -83,7 +83,7 @@ export const lessons: Lesson[] = [
     lead: "郷土の伝統と文化の尊重、郷土を愛する態度。ねらいは、地域の活動のよさ。",
     slides: {
       href: "/materials/natsumatsuri-board.pdf",
-      title: "掲示用スライド",
+      title: "まとめスライド",
     },
     tags: ["集団や社会"],
     keywords: ["和樹", "夏祭り", "郷土", "伝統", "文化", "地域", "掲示", "振り返り", "スライド", "C-16", "C－16"],
@@ -100,7 +100,7 @@ export const lessons: Lesson[] = [
     lead: "相互理解、寛容。ねらいは、ほかの人の立場。",
     slides: {
       href: "/materials/kutsu-feedback.pdf",
-      title: "学級用フィードバック",
+      title: "まとめスライド",
     },
     tags: ["人との関わり"],
     keywords: ["他人の靴", "靴", "相互理解", "寛容", "立場", "フィードバック", "B-9", "B－9"],

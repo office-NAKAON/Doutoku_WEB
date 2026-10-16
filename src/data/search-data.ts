@@ -28,7 +28,7 @@ export const searchData: SearchItem[] = [
   },
   {
     title: "授業の記録",
-    description: "教材11から16。内容項目とねらい。",
+    description: "教材11から16。「内容項目」と「ねらい」。",
     url: "/records",
     category: "案内",
     keywords: ["記録", "授業", "ポートフォリオ", "一覧"],

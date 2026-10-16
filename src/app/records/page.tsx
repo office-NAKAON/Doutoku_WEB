@@ -4,7 +4,7 @@ import { RecordBoard } from "@/components/RecordBoard";
 
 export const metadata: Metadata = {
   title: "授業の記録",
-  description: "教材11から16の内容項目とねらい。",
+  description: "教材11から16の「内容項目」と「ねらい」。",
 };
 
 export default function RecordsPage() {
