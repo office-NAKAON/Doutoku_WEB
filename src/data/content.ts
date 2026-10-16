@@ -16,6 +16,10 @@ export type Lesson = {
   date: string;
   aim: string;
   lead: string;
+  slides?: {
+    href: string;
+    title: string;
+  };
   tags: string[];
   keywords: string[];
 };
@@ -77,8 +81,12 @@ export const lessons: Lesson[] = [
     date: "2026-09-09",
     aim: "地域の活動のよさ",
     lead: "郷土の伝統と文化の尊重、郷土を愛する態度。ねらいは、地域の活動のよさ。",
+    slides: {
+      href: "/materials/natsumatsuri-board.pdf",
+      title: "掲示用スライド",
+    },
     tags: ["集団や社会"],
-    keywords: ["和樹", "夏祭り", "郷土", "伝統", "文化", "地域", "C-16", "C－16"],
+    keywords: ["和樹", "夏祭り", "郷土", "伝統", "文化", "地域", "掲示", "振り返り", "スライド", "C-16", "C－16"],
   },
   {
     slug: "kutsu",

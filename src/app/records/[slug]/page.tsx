@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { TransitionLink } from "@/components/TransitionLink";
 import { formatLessonDate, getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -53,6 +55,27 @@ export default async function LessonPage({ params }: Props) {
       <p className="mt-3 border-l-4 border-primary pl-6 font-display text-3xl leading-snug sm:text-4xl">
         {lesson.aim}
       </p>
+
+      {lesson.slides ? (
+        <section className="mt-12">
+          <p className="text-xs tracking-[0.18em] text-muted">クラス全体の振り返り</p>
+          <h2 className="mt-3 font-display text-3xl">{lesson.slides.title}</h2>
+          <p className="mt-4 text-sm leading-relaxed text-muted">
+            ロイロノートでは「PDFを開く」を押してください。スライドのPDFがそのまま開きます。
+          </p>
+          <a
+            href={`${basePath}${lesson.slides.href}`}
+            className="mt-6 inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-sm transition-all duration-200 hover:brightness-110 active:scale-95"
+          >
+            PDFを開く
+          </a>
+          <iframe
+            title={`${lesson.title} ${lesson.slides.title}`}
+            src={`${basePath}${lesson.slides.href}`}
+            className="mt-8 h-[70vh] w-full rounded-xl border border-border bg-card"
+          />
+        </section>
+      ) : null}
 
       <aside className="mt-12 rounded-xl border border-border bg-card p-6 shadow-sm">
         <p className="text-xs tracking-[0.18em] text-muted">内容項目</p>
