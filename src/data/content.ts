@@ -98,8 +98,12 @@ export const lessons: Lesson[] = [
     date: "2026-09-16",
     aim: "ほかの人の立場",
     lead: "相互理解、寛容。ねらいは、ほかの人の立場。",
+    slides: {
+      href: "/materials/kutsu-feedback.pdf",
+      title: "学級用フィードバック",
+    },
     tags: ["人との関わり"],
-    keywords: ["他人の靴", "靴", "相互理解", "寛容", "立場", "B-9", "B－9"],
+    keywords: ["他人の靴", "靴", "相互理解", "寛容", "立場", "フィードバック", "B-9", "B－9"],
   },
   {
     slug: "yoshito",

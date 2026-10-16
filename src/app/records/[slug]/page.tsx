@@ -61,7 +61,7 @@ export default async function LessonPage({ params }: Props) {
           <p className="text-xs tracking-[0.18em] text-muted">クラス全体の振り返り</p>
           <h2 className="mt-3 font-display text-3xl">{lesson.slides.title}</h2>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            ロイロノートでは「PDFを開く」を押してください。スライドのPDFがそのまま開きます。
+            ロイロノートでは「PDFを開く」を押してください。PDFがそのまま開きます。
           </p>
           <a
             href={`${basePath}${lesson.slides.href}`}
