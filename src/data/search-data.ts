@@ -12,7 +12,7 @@ export interface SearchItem {
 export const searchData: SearchItem[] = [
   {
     title: "トップ",
-    description: "2年3組 道徳Web の表紙。四つの視点と、教材11から16へ入る。",
+    description: "2年3組 道徳Web の表紙。四つの視点と、教材1から16へ入る。",
     url: "/",
     category: "案内",
     keywords: ["ホーム", "トップ", "表紙", "2年3組", "道徳"],
@@ -28,7 +28,7 @@ export const searchData: SearchItem[] = [
   },
   {
     title: "授業の記録",
-    description: "教材11から16。「内容項目」と「ねらい」。",
+    description: "教材1から16。「内容項目」と「ねらい」。",
     url: "/records",
     category: "案内",
     keywords: ["記録", "授業", "ポートフォリオ", "一覧"],

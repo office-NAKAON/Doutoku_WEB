@@ -20,7 +20,7 @@ export default function ClassPage() {
       <PageHeader
         eyebrow="CLASS 2-3"
         title="クラスについて"
-        description="教材11から16の「内容項目」と「ねらい」を、クラスで共有するためのサイトです。"
+        description="教材1から16の「内容項目」と「ねらい」を、クラスで共有するためのサイトです。"
       />
       <div className="mx-auto grid max-w-6xl gap-8 px-6 py-16 lg:grid-cols-12 lg:py-20">
         <div className="space-y-6 text-lg leading-loose lg:col-span-7">
@@ -28,7 +28,7 @@ export default function ClassPage() {
             道徳の時間で扱った教材を「内容項目」と「ねらい」とともに置く場所です。
           </p>
           <p>
-            掲載している実践は、教材11「父の決意」から教材16「樹齢七千年の杉」までの6つです。各ページに「内容項目」と「ねらい」を載せています。
+            掲載している実践は、教材1「おじさん役と私」から教材16「樹齢七千年の杉」までの16です。各ページに「内容項目」と「ねらい」を載せています。
           </p>
         </div>
         <aside className="rounded-xl border border-border bg-card p-6 shadow-sm lg:col-span-5">

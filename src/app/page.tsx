@@ -12,15 +12,15 @@ import {
 
 const stats = [
   { value: "04", label: "学びの視点" },
-  { value: "06", label: "授業の記録" },
-  { value: "11–16", label: "教材番号" },
+  { value: "16", label: "授業の記録" },
+  { value: "1–16", label: "教材番号" },
   { value: "2026", label: "年度" },
 ];
 
 const guide = [
   {
     title: "教材を選ぶ",
-    body: "番号、教材名、内容項目から開く。掲載しているのは、11から16までの6つです。",
+    body: "番号、教材名、内容項目から開く。掲載しているのは、1から16までの16です。",
   },
   {
     title: "ねらいを見る",
@@ -55,7 +55,7 @@ export default function Home() {
               </h1>
             </div>
             <p className="mt-8 max-w-xl text-lg leading-relaxed text-muted">
-              教材11から16までの実践を、「内容項目」と「ねらい」とともに残す、2年3組のポートフォリオです。
+              教材1から16までの実践を、「内容項目」と「ねらい」とともに残す、2年3組のポートフォリオです。
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               {latestLesson && (
