@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TransitionLink } from "@/components/TransitionLink";
+import { WellbeingPractice } from "@/components/WellbeingPractice";
 import { formatLessonDate, getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -76,6 +77,8 @@ export default async function LessonPage({ params }: Props) {
           />
         </section>
       ) : null}
+
+      {lesson.wellbeing ? <WellbeingPractice practice={lesson.wellbeing} /> : null}
 
       <aside className="mt-12 rounded-xl border border-border bg-card p-6 shadow-sm">
         <p className="text-xs tracking-[0.18em] text-muted">内容項目</p>

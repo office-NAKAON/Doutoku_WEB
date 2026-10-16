@@ -20,8 +20,27 @@ export type Lesson = {
     href: string;
     title: string;
   };
+  wellbeing?: WellbeingPractice;
   tags: string[];
   keywords: string[];
+};
+
+export type WellbeingCategory = "I" | "WE" | "SOCIETY";
+
+export type WellbeingPractice = {
+  category: WellbeingCategory;
+  prompt?: string;
+  summary: string;
+  results?: {
+    src: string;
+    alt: string;
+  }[];
+};
+
+export const wellbeingCategories: Record<WellbeingCategory, { label: string; scope: string }> = {
+  I: { label: "I", scope: "自分の気持ちや行動" },
+  WE: { label: "WE", scope: "近しい人との関わり" },
+  SOCIETY: { label: "SOCIETY", scope: "社会との関わり" },
 };
 
 export const themes: Theme[] = [
@@ -68,8 +87,24 @@ export const lessons: Lesson[] = [
     date: "2026-09-01",
     aim: "生き抜くこと",
     lead: "生命の尊さ。ねらいは、生き抜くこと。",
+    wellbeing: {
+      category: "I",
+      prompt: "困難なとき、自分が生き抜くために大切にしたいことを一つ選びましょう。",
+      summary: "ウェルビーイング・コンピテンシーの「I」にある9つの中から、1つを選びました。",
+      results: [
+        { src: "/materials/wellbeing/i-01.png", alt: "第1位、自分で決める、7人" },
+        { src: "/materials/wellbeing/i-02.png", alt: "第2位、挑戦、4人" },
+        { src: "/materials/wellbeing/i-03.png", alt: "第3位、心の平穏、3人" },
+        { src: "/materials/wellbeing/i-04.png", alt: "第4位、日常、2人" },
+        { src: "/materials/wellbeing/i-05.png", alt: "第4位、希望、2人" },
+        { src: "/materials/wellbeing/i-06.png", alt: "第4位、自分らしさ、2人" },
+        { src: "/materials/wellbeing/i-07.png", alt: "第7位、熱中、1人" },
+        { src: "/materials/wellbeing/i-08.png", alt: "第7位、達成、1人" },
+        { src: "/materials/wellbeing/i-09.png", alt: "第7位、成長、1人" },
+      ],
+    },
     tags: ["生命と自然"],
-    keywords: ["父の決意", "生命", "尊さ", "生き抜く", "D-19", "D－19"],
+    keywords: ["父の決意", "生命", "尊さ", "生き抜く", "ウェルビーイング", "コンピテンシー", "I", "D-19", "D－19"],
   },
   {
     slug: "natsumatsuri",
@@ -85,8 +120,20 @@ export const lessons: Lesson[] = [
       href: "/materials/natsumatsuri-board.pdf",
       title: "まとめスライド",
     },
+    wellbeing: {
+      category: "SOCIETY",
+      prompt: "社会貢献するときに、あなたが大切にしたいことを一つ選びましょう。",
+      summary: "「SOCIETY」のカテゴリーから、自分が最も大切にしたいものを選びました。",
+      results: [
+        { src: "/materials/wellbeing/society-01.png", alt: "第1位、思いやり、10人" },
+        { src: "/materials/wellbeing/society-02.png", alt: "第2位、協調、7人" },
+        { src: "/materials/wellbeing/society-03.png", alt: "第3位、多様性、2人" },
+        { src: "/materials/wellbeing/society-04.png", alt: "第4位、社会貢献、1人" },
+        { src: "/materials/wellbeing/society-05.png", alt: "第5位、決まりを守る、0人" },
+      ],
+    },
     tags: ["集団や社会"],
-    keywords: ["和樹", "夏祭り", "郷土", "伝統", "文化", "地域", "掲示", "振り返り", "スライド", "C-16", "C－16"],
+    keywords: ["和樹", "夏祭り", "郷土", "伝統", "文化", "地域", "掲示", "振り返り", "スライド", "ウェルビーイング", "SOCIETY", "C-16", "C－16"],
   },
   {
     slug: "kutsu",
@@ -102,8 +149,24 @@ export const lessons: Lesson[] = [
       href: "/materials/kutsu-feedback.pdf",
       title: "まとめスライド",
     },
+    wellbeing: {
+      category: "WE",
+      prompt: "「わたしたち」として活動するとき、あなたが大切にしたいことを一つ選びましょう。",
+      summary: "「WE」のカテゴリーから、自分が最も大切にしたいものを選びました。",
+      results: [
+        { src: "/materials/wellbeing/we-01.png", alt: "第1位、価値観の理解、7人" },
+        { src: "/materials/wellbeing/we-02.png", alt: "第2位、信頼、5人" },
+        { src: "/materials/wellbeing/we-03.png", alt: "第3位、友情、3人" },
+        { src: "/materials/wellbeing/we-04.png", alt: "第3位、認め合う、3人" },
+        { src: "/materials/wellbeing/we-05.png", alt: "第5位、応援・推し、2人" },
+        { src: "/materials/wellbeing/we-06.png", alt: "第6位、愛、1人" },
+        { src: "/materials/wellbeing/we-07.png", alt: "第6位、感謝、1人" },
+        { src: "/materials/wellbeing/we-08.png", alt: "第8位、あこがれ・尊敬、0人" },
+        { src: "/materials/wellbeing/we-09.png", alt: "第8位、祝福、0人" },
+      ],
+    },
     tags: ["人との関わり"],
-    keywords: ["他人の靴", "靴", "相互理解", "寛容", "立場", "フィードバック", "B-9", "B－9"],
+    keywords: ["他人の靴", "靴", "相互理解", "寛容", "立場", "フィードバック", "ウェルビーイング", "WE", "B-9", "B－9"],
   },
   {
     slug: "yoshito",
