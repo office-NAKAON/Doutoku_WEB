@@ -216,6 +216,10 @@ export const lessons: Lesson[] = [
     date: "2026-09-01",
     aim: "生き抜くこと",
     lead: "生命の尊さ。ねらいは、生き抜くこと。",
+    slides: {
+      href: "/materials/fathers-determination.pdf",
+      title: "まとめスライド",
+    },
     wellbeing: {
       category: "I",
       prompt: "困難なとき、自分が生き抜くために大切にしたいことを一つ選びましょう。",
@@ -233,7 +237,7 @@ export const lessons: Lesson[] = [
       ],
     },
     tags: ["生命と自然"],
-    keywords: ["父の決意", "生命", "尊さ", "生き抜く", "ウェルビーイング", "コンピテンシー", "I", "D-19", "D－19"],
+    keywords: ["父の決意", "生命", "尊さ", "生き抜く", "スライド", "ウェルビーイング", "コンピテンシー", "I", "D-19", "D－19"],
   },
   {
     slug: "natsumatsuri",
@@ -307,8 +311,12 @@ export const lessons: Lesson[] = [
     date: "2026-10-07",
     aim: "公正な態度",
     lead: "公正、公平、社会正義。ねらいは、公正な態度。",
+    slides: {
+      href: "/materials/yosito.pdf",
+      title: "まとめスライド",
+    },
     tags: ["集団や社会"],
-    keywords: ["ヨシト", "公正", "公平", "社会正義", "C-11", "C－11"],
+    keywords: ["ヨシト", "公正", "公平", "社会正義", "スライド", "C-11", "C－11"],
   },
   {
     slug: "shogi",
@@ -333,8 +341,12 @@ export const lessons: Lesson[] = [
     date: "2026-10-14",
     aim: "自然の偉大さ",
     lead: "感動、畏敬の念。ねらいは、自然の偉大さ。",
+    slides: {
+      href: "/materials/great-nature.pdf",
+      title: "まとめスライド",
+    },
     tags: ["生命と自然"],
-    keywords: ["杉", "樹齢", "七千年", "感動", "畏敬", "自然", "D-21", "D－21"],
+    keywords: ["杉", "樹齢", "七千年", "感動", "畏敬", "自然", "スライド", "D-21", "D－21"],
   },
 ];
 
