@@ -391,7 +391,7 @@ export const perspectiveTags = [
 ] as const;
 
 export const currentQuestion = {
-  label: "掲載中の教材",
-  text: "1「おじさん役と私」から、16「樹齢七千年の杉」まで。",
-  note: "各ページには、教材名、内容項目、ねらいを載せています。",
+  label: "目指していること",
+  text: "自分の考え × 友だちの考え = 自分のアップデート",
+  note: "全ては「ウェルビーイング」のために。",
 };

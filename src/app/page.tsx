@@ -70,7 +70,7 @@ export default function Home() {
                 href="#question"
                 className="inline-flex items-center justify-center rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium transition-all duration-200 hover:border-primary active:scale-95"
               >
-                掲載中の教材
+                目指していること
               </a>
             </div>
           </div>
