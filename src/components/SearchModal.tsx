@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useId, useRef, useState } from "react";
 import { useSearch } from "@/hooks/useSearch";
+import { ConstructionNote } from "@/components/ConstructionNote";
 import { highlight } from "@/lib/search";
 import { usePageTransition } from "@/components/PageTransition";
 import type { SearchItem } from "@/data/search-data";
@@ -205,6 +206,7 @@ function SearchModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void
                       className="font-display text-lg"
                       dangerouslySetInnerHTML={{ __html: highlight(item.title, query) }}
                     />
+                    {item.unpublished ? <ConstructionNote size="inline" /> : null}
                     <span
                       className="text-sm leading-relaxed text-muted"
                       dangerouslySetInnerHTML={{ __html: highlight(item.description, query) }}

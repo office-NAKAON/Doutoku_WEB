@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/PageHeader";
 import { TransitionLink } from "@/components/TransitionLink";
-import { formatLessonDate, lessonsForTheme, themes } from "@/data/content";
+import { ConstructionNote } from "@/components/ConstructionNote";
+import { formatLessonDate, isRecordPublished, lessonsForTheme, themes } from "@/data/content";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -50,7 +51,10 @@ export default async function ThemePage({ params }: Props) {
                   className="grid gap-2 border-b border-border py-6 transition-colors hover:bg-secondary/70 sm:grid-cols-12 sm:items-baseline sm:gap-4"
                 >
                   <span className="font-display text-lg text-primary sm:col-span-1">{lesson.index}</span>
-                  <span className="font-display text-3xl sm:col-span-6">{lesson.title}</span>
+                  <span className="sm:col-span-6">
+                    <span className="block font-display text-3xl">{lesson.title}</span>
+                    {isRecordPublished(lesson) ? null : <ConstructionNote size="inline" />}
+                  </span>
                   <span className="text-sm text-muted sm:col-span-3">{lesson.contentItem}</span>
                   <span className="text-sm text-muted sm:col-span-2 sm:text-right">{formatLessonDate(lesson.date)}</span>
                 </TransitionLink>

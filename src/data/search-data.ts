@@ -1,4 +1,4 @@
-import { lessons, themes } from "@/data/content";
+import { isRecordPublished, lessons, themes } from "@/data/content";
 
 export interface SearchItem {
   title: string;
@@ -7,6 +7,7 @@ export interface SearchItem {
   category: string;
   keywords: string[];
   tags?: string[];
+  unpublished?: boolean;
 }
 
 export const searchData: SearchItem[] = [
@@ -57,5 +58,6 @@ export const searchData: SearchItem[] = [
     category: "授業の記録",
     keywords: [lesson.contentItem, lesson.aim, lesson.code, ...lesson.keywords],
     tags: lesson.tags,
+    unpublished: !isRecordPublished(lesson),
   })),
 ];

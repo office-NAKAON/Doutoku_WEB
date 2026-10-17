@@ -358,6 +358,10 @@ export function getTheme(slug: string) {
   return themes.find((theme) => theme.slug === slug);
 }
 
+export function isRecordPublished(lesson: Pick<Lesson, "slides">) {
+  return Boolean(lesson.slides);
+}
+
 export function getLesson(slug: string) {
   return lessons.find((lesson) => lesson.slug === slug);
 }

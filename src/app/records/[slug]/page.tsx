@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { ConstructionNote } from "@/components/ConstructionNote";
 import { TransitionLink } from "@/components/TransitionLink";
 import { WellbeingPractice } from "@/components/WellbeingPractice";
-import { formatLessonDate, getLesson, getTheme, lessons, lessonsForTheme } from "@/data/content";
+import { formatLessonDate, getLesson, getTheme, isRecordPublished, lessons, lessonsForTheme } from "@/data/content";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
@@ -76,7 +77,9 @@ export default async function LessonPage({ params }: Props) {
             className="mt-8 h-[70vh] w-full rounded-xl border border-border bg-card"
           />
         </section>
-      ) : null}
+      ) : (
+        <ConstructionNote />
+      )}
 
       {lesson.wellbeing ? <WellbeingPractice practice={lesson.wellbeing} /> : null}
 
@@ -97,7 +100,10 @@ export default async function LessonPage({ params }: Props) {
                   href={`/records/${item.slug}`}
                   className="flex flex-wrap items-baseline justify-between gap-3 py-4 transition-colors hover:text-primary"
                 >
-                  <span className="font-display text-xl">{item.title}</span>
+                  <span>
+                    <span className="block font-display text-xl">{item.title}</span>
+                    {isRecordPublished(item) ? null : <ConstructionNote size="inline" />}
+                  </span>
                   <span className="text-sm text-muted">{formatLessonDate(item.date)}</span>
                 </TransitionLink>
               </li>

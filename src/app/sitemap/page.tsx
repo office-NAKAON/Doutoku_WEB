@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ConstructionNote } from "@/components/ConstructionNote";
 import { PageHeader } from "@/components/PageHeader";
 import { TransitionLink } from "@/components/TransitionLink";
 import { searchData } from "@/data/search-data";
@@ -32,7 +33,10 @@ export default function SitemapPage() {
                 <li key={item.url}>
                   <TransitionLink href={item.url} className="flex items-center gap-3 rounded-lg py-1 transition-colors hover:text-primary">
                     <span className="badge">{index + 1}</span>
-                    <span>{item.title}</span>
+                    <span className="min-w-0">
+                      <span className="block">{item.title}</span>
+                      {item.unpublished ? <ConstructionNote size="inline" /> : null}
+                    </span>
                   </TransitionLink>
                 </li>
               ))}
