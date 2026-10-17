@@ -203,8 +203,12 @@ export const lessons: Lesson[] = [
     date: "2026-07-08",
     aim: "国と国のきずな",
     lead: "国際理解、国際貢献。ねらいは、国と国のきずな。",
+    slides: {
+      href: "/materials/kashino-gallery.pdf",
+      title: "振り返りギャラリー",
+    },
     tags: ["集団や社会"],
-    keywords: ["時", "樫野", "きずな", "国際理解", "国際貢献", "C-18", "C－18"],
+    keywords: ["時", "樫野", "きずな", "国際理解", "国際貢献", "振り返り", "ギャラリー", "C-18", "C－18"],
   },
   {
     slug: "chichi",
